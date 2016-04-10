@@ -1,88 +1,88 @@
 {
-  //required
+  // REQUIRED
   "name": "<Extension Name>",
   "version": "0.0.5",
   "manifest_version": 2,
 
-  //recommended
+  // RECOMMENDED
   "default_locale": "en",
-  "description": "Chrome Extension Template",
+  "description": "<Chrome Extension Template>",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
 
-
-
-
-  "homepage_url": "http://google.com",
+  // PERSONAL
+  "author": "Kedar Deshpande",
+  "homepage_url": "http://github.com/kedardes"
   
+  // CHOOSE ONE OR NONE OF THE TWO BELOW
+  /************************************************************************
+    PAGE_ACTION
 
+    Use the chrome.pageAction API to put icons inside the address bar. Page actions represent actions that can be taken on the current page, but that aren't applicable to all pages.
 
+    https://developer.chrome.com/extensions/pageAction 
+  ************************************************************************/
 
-//////////////////NEED ONE OF THESE 
+  /*
+  "page_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "Google Mail",
+    "default_popup": "popup.html"
+  },
+  */
 
-/* https://developer.chrome.com/extensions/pageAction
+  /************************************************************************
+    BROWSER_ACTION
 
-Use the chrome.pageAction API to put icons inside the address bar. Page actions represent actions that can be taken on the current page, but that aren't applicable to all pages. 
+    Use browser actions to put icons in the main Google Chrome toolbar, to the right of the address bar. In addition to its icon, a browser action can also have a tooltip, a badge, and a popup.
 
-"page_action": {
-          "default_icon": {                    // optional
-            "19": "images/icon19.png",           // optional
-            "38": "images/icon38.png"            // optional
-          },
-          "default_title": "Google Mail",      // optional; shown in tooltip
-          "default_popup": "popup.html"        // optional
-        },
-*/
+    https://developer.chrome.com/extensions/browserAction 
+  ************************************************************************/
 
-
-
-
-
-/* https://developer.chrome.com/extensions/browserAction
-
-Use browser actions to put icons in the main Google Chrome toolbar, to the right of the address bar. In addition to its icon, a browser action can also have a tooltip, a badge, and a popup.
-
-"browser_action": {
-          "default_icon": {                    // optional
-            "19": "images/icon19.png",           // optional
-            "38": "images/icon38.png"            // optional
-          },
-          "default_title": "Google Mail",      // optional; shown in tooltip
-          "default_popup": "popup.html"        // optional
-        },
-*/
-
-
-//////////////////NEED ONE OF THESE 
-
-
+  /*
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "Google Mail",
+    "default_popup": "popup.html"
+  },
+  */
+  // CHOOSE ONE OR NONE OF THE TWO ABOVE
 
 
 
 
 
+  /************************************************************************
+  A common need for apps and extensions is to have a single long-running script to manage some task or state. Event pages to the rescue. Event pages are loaded only when they are needed. When the event page is not actively doing something, it is unloaded, freeing memory and other system resources.
 
-// https://developer.chrome.com/extensions/event_pages
+  https://developer.chrome.com/extensions/event_pages
+  ************************************************************************/
 
-/* A common need for apps and extensions is to have a single long-running script to manage some task or state. Event pages to the rescue. Event pages are loaded only when they are needed. When the event page is not actively doing something, it is unloaded, freeing memory and other system resources. */
-
-/*
+  /*
   "background": {
     "scripts": ["eventPage.js"],
-    "persistent": false
+    "persistent": false  //recommended
   },
-*/
+  */
 
-// https://developer.chrome.com/extensions/content_scripts
 
-/* Content scripts are JavaScript files that run in the context of web pages.
-By using the standard Document Object Model (DOM), they can read details of the
-web pages the browser visits, or make changes to them. */
+  /************************************************************************
+  Content scripts are JavaScript files that run in the context of web pages.
+  By using the standard Document Object Model (DOM), they can read details of the web pages the browser visits, or make changes to them.
 
-/*
+  https://developer.chrome.com/extensions/content_scripts
+  ************************************************************************/
+
+  /*
   "content_scripts": [
     {
       "matches": ["http://www.google.com/*"],
@@ -90,7 +90,7 @@ web pages the browser visits, or make changes to them. */
       "js": ["jquery.js", "myscript.js"]
     }
   ],
-*/
+  */
 
 
 
@@ -100,49 +100,29 @@ web pages the browser visits, or make changes to them. */
   // PERMISSIONS - FIX/PRUNE THESE
   //============================================================================
 
-  // http://code.google.com/chrome/extensions/manifest.html#permissions
+  // https://developer.chrome.com/extensions/declare_permissions
 
   /*
   "permissions": [
-    "http://*.google.com/", // Refer to http://goo.gl/CPeqK http://goo.gl/U3Vev
-    "bookmarks", // http://code.google.com/chrome/extensions/bookmarks.html
-    "chrome://favicon/",
-    "clipboardRead", // document.execCommand('paste').
-    "clipboardWrite", // document.execCommand('copy' OR 'cut')
-    "contextMenus", //http:///code.google.com/chrome/extensions/contextMenus.html
-    "cookies", // http://code.google.com/chrome/extensions/cookies.html
-    // "experimental", // http://code.google.com/chrome/extensions/dev/experimental.html
-    "fileBrowserHandler", // http://goo.gl/GqbrP
-    "geolocation", // http://dev.w3.org/geo/api/spec-source.html
-    "history", // http://code.google.com/chrome/extensions/history.html
-    "idle", // http://code.google.com/chrome/extensions/idle.html
-    "management", // http://code.google.com/chrome/extensions/management.html
-    "notifications", // code.google.com/chrome/extensions/notifications.html
-    "tabs", // http://code.google.com/chrome/extensions/tabs.html +windows.html
-    "tts", // http://code.google.com/chrome/extensions/tts.html
-    "ttsEngine", // http://code.google.com/chrome/extensions/ttsEngine.html
-    "unlimitedStorage"
-  ],
+  "tabs",
+  "bookmarks",
+  "http://www.blogger.com/",
+  "http://*.google.com/",
+  "unlimitedStorage"
+],
   */
 
 
+  /************************************************************************
+  To allow users to customize the behavior of your extension, you may wish to provide an options page.
 
+  https://developer.chrome.com/extensions/optionsV2
+  ************************************************************************/
 
-
-
-
-
-/* https://developer.chrome.com/extensions/optionsV2
-NEW options page
-
-"options_ui": {
-    // Required.
-    "page": "options.html",
-    // Recommended.
-    "chrome_style": true,
-    // Not recommended; only provided for backwards compatibility,
-    // and will be unsupported in a future version of Chrome (TBD).
-    //"open_in_tab": true
+  /*
+  "options_ui": {
+    "page": "options.html",   //required
+    "chrome_style": true    //recommended
   },
   */
 
