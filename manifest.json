@@ -18,13 +18,15 @@
   "homepage_url": "http://github.com/kedardes"
   
   // CHOOSE ONE OR NONE OF THE TWO BELOW
-  /************************************************************************
+  /*
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     PAGE_ACTION
 
     Use the chrome.pageAction API to put icons inside the address bar. Page actions represent actions that can be taken on the current page, but that aren't applicable to all pages.
 
     https://developer.chrome.com/extensions/pageAction 
-  ************************************************************************/
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  */
 
   /*
   "page_action": {
@@ -37,13 +39,15 @@
   },
   */
 
-  /************************************************************************
+  /*
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     BROWSER_ACTION
 
     Use browser actions to put icons in the main Google Chrome toolbar, to the right of the address bar. In addition to its icon, a browser action can also have a tooltip, a badge, and a popup.
 
-    https://developer.chrome.com/extensions/browserAction 
-  ************************************************************************/
+    https://developer.chrome.com/extensions/browserAction
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  */
 
   /*
   "browser_action": {
@@ -61,11 +65,13 @@
 
 
 
-  /************************************************************************
+  /*
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   A common need for apps and extensions is to have a single long-running script to manage some task or state. Event pages to the rescue. Event pages are loaded only when they are needed. When the event page is not actively doing something, it is unloaded, freeing memory and other system resources.
 
   https://developer.chrome.com/extensions/event_pages
-  ************************************************************************/
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  */
 
   /*
   "background": {
@@ -75,12 +81,14 @@
   */
 
 
-  /************************************************************************
+  /*
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   Content scripts are JavaScript files that run in the context of web pages.
   By using the standard Document Object Model (DOM), they can read details of the web pages the browser visits, or make changes to them.
 
   https://developer.chrome.com/extensions/content_scripts
-  ************************************************************************/
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  */
 
   /*
   "content_scripts": [
@@ -92,6 +100,21 @@
   ],
   */
 
+
+  /*
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  To allow users to customize the behavior of your extension, you may wish to provide an options page.
+
+  https://developer.chrome.com/extensions/optionsV2
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  */
+
+  /*
+  "options_ui": {
+    "page": "options.html",   //required
+    "chrome_style": true      //recommended
+  },
+  */
 
 
 
@@ -113,18 +136,7 @@
   */
 
 
-  /************************************************************************
-  To allow users to customize the behavior of your extension, you may wish to provide an options page.
 
-  https://developer.chrome.com/extensions/optionsV2
-  ************************************************************************/
-
-  /*
-  "options_ui": {
-    "page": "options.html",   //required
-    "chrome_style": true    //recommended
-  },
-  */
 
 
 }
