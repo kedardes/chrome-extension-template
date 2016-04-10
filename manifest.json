@@ -1,0 +1,142 @@
+{
+  "name": "CHANGE THIS : Extension boilerplate",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension was created with the awesome extensionizr.com",
+  "homepage_url": "http://extensionizr.com",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en"
+
+
+
+
+
+
+
+
+
+
+
+// https://developer.chrome.com/extensions/event_pages
+/*
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+*/
+
+// http://code.google.com/chrome/extensions/content_scripts.html
+/*
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "css": ["src/contentStyle.css"],
+      "js": ["lib/jquery.min.js", "src/contentScript.js"]
+    }
+  ],
+*/
+
+// http://code.google.com/chrome/extensions/npapi.html
+/*
+  "plugins": [
+    { "path": "content_plugin.dll", "public": true },
+    { "path": "extension_plugin.dll" }
+  ],
+*/
+
+
+
+
+
+  //============================================================================
+  // PERMISSIONS
+  //============================================================================
+
+  // http://code.google.com/chrome/extensions/manifest.html#permissions
+
+  /*
+  "permissions": [
+    "http://*.google.com/", // Refer to http://goo.gl/CPeqK http://goo.gl/U3Vev
+    "bookmarks", // http://code.google.com/chrome/extensions/bookmarks.html
+    "chrome://favicon/",
+    "clipboardRead", // document.execCommand('paste').
+    "clipboardWrite", // document.execCommand('copy' OR 'cut')
+    "contextMenus", //http:///code.google.com/chrome/extensions/contextMenus.html
+    "cookies", // http://code.google.com/chrome/extensions/cookies.html
+    // "experimental", // http://code.google.com/chrome/extensions/dev/experimental.html
+    "fileBrowserHandler", // http://goo.gl/GqbrP
+    "geolocation", // http://dev.w3.org/geo/api/spec-source.html
+    "history", // http://code.google.com/chrome/extensions/history.html
+    "idle", // http://code.google.com/chrome/extensions/idle.html
+    "management", // http://code.google.com/chrome/extensions/management.html
+    "notifications", // code.google.com/chrome/extensions/notifications.html
+    "tabs", // http://code.google.com/chrome/extensions/tabs.html +windows.html
+    "tts", // http://code.google.com/chrome/extensions/tts.html
+    "ttsEngine", // http://code.google.com/chrome/extensions/ttsEngine.html
+    "unlimitedStorage"
+  ],
+  */
+
+
+
+//////////////////NEED ONE OF THESE 
+
+/* https://developer.chrome.com/extensions/pageAction
+
+Use the chrome.pageAction API to put icons inside the address bar. Page actions represent actions that can be taken on the current page, but that aren't applicable to all pages. 
+
+"page_action": {
+          "default_icon": {                    // optional
+            "19": "images/icon19.png",           // optional
+            "38": "images/icon38.png"            // optional
+          },
+          "default_title": "Google Mail",      // optional; shown in tooltip
+          "default_popup": "popup.html"        // optional
+        },
+*/
+
+
+
+
+
+/* https://developer.chrome.com/extensions/browserAction
+
+Use browser actions to put icons in the main Google Chrome toolbar, to the right of the address bar. In addition to its icon, a browser action can also have a tooltip, a badge, and a popup.
+
+"browser_action": {
+          "default_icon": {                    // optional
+            "19": "images/icon19.png",           // optional
+            "38": "images/icon38.png"            // optional
+          },
+          "default_title": "Google Mail",      // optional; shown in tooltip
+          "default_popup": "popup.html"        // optional
+        },
+*/
+
+
+//////////////////NEED ONE OF THESE 
+
+
+
+
+
+/* https://developer.chrome.com/extensions/optionsV2
+NEW options page
+
+"options_ui": {
+    // Required.
+    "page": "options.html",
+    // Recommended.
+    "chrome_style": true,
+    // Not recommended; only provided for backwards compatibility,
+    // and will be unsupported in a future version of Chrome (TBD).
+    //"open_in_tab": true
+  },
+  */
+
+
+}
