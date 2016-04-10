@@ -1,12 +1,12 @@
 {
   // REQUIRED
-  "name": "<Extension Name>",
+  "name": "Chrome Extension Name>",
   "version": "0.0.5",
   "manifest_version": 2,
 
   // RECOMMENDED
   "default_locale": "en",
-  "description": "<Chrome Extension Template>",
+  "description": "Chrome Extension Description",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -16,8 +16,9 @@
   // PERSONAL
   "author": "Kedar Deshpande",
   "homepage_url": "http://github.com/kedardes"
+
   
-  // CHOOSE ONE OR NONE OF THE TWO BELOW
+  // CHOOSE EITHER PAGE_ACTION OR BROWSER_ACTION BUT NOT BOTH
   /*
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     PAGE_ACTION
@@ -39,6 +40,7 @@
   },
   */
 
+
   /*
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     BROWSER_ACTION
@@ -59,10 +61,6 @@
     "default_popup": "popup.html"
   },
   */
-  // CHOOSE ONE OR NONE OF THE TWO ABOVE
-
-
-
 
 
   /*
@@ -117,12 +115,9 @@
   */
 
 
-
-
-  //============================================================================
+  /*
   // PERMISSIONS - FIX/PRUNE THESE
-  //============================================================================
-
+  //
   // https://developer.chrome.com/extensions/declare_permissions
 
   /*
@@ -134,8 +129,6 @@
   "unlimitedStorage"
 ],
   */
-
-
 
 
 
