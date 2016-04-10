@@ -1,85 +1,23 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
-  "version": "0.0.1",
+  //required
+  "name": "<Extension Name>",
+  "version": "0.0.5",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+
+  //recommended
+  "default_locale": "en",
+  "description": "Chrome Extension Template",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "default_locale": "en"
 
 
 
 
-
-
-
-
-
-
-
-// https://developer.chrome.com/extensions/event_pages
-/*
-  "background": {
-    "scripts": ["eventPage.js"],
-    "persistent": false
-  },
-*/
-
-// http://code.google.com/chrome/extensions/content_scripts.html
-/*
-  "content_scripts": [
-    {
-      "matches": ["http://www.google.com/*"],
-      "css": ["src/contentStyle.css"],
-      "js": ["lib/jquery.min.js", "src/contentScript.js"]
-    }
-  ],
-*/
-
-// http://code.google.com/chrome/extensions/npapi.html
-/*
-  "plugins": [
-    { "path": "content_plugin.dll", "public": true },
-    { "path": "extension_plugin.dll" }
-  ],
-*/
-
-
-
-
-
-  //============================================================================
-  // PERMISSIONS
-  //============================================================================
-
-  // http://code.google.com/chrome/extensions/manifest.html#permissions
-
-  /*
-  "permissions": [
-    "http://*.google.com/", // Refer to http://goo.gl/CPeqK http://goo.gl/U3Vev
-    "bookmarks", // http://code.google.com/chrome/extensions/bookmarks.html
-    "chrome://favicon/",
-    "clipboardRead", // document.execCommand('paste').
-    "clipboardWrite", // document.execCommand('copy' OR 'cut')
-    "contextMenus", //http:///code.google.com/chrome/extensions/contextMenus.html
-    "cookies", // http://code.google.com/chrome/extensions/cookies.html
-    // "experimental", // http://code.google.com/chrome/extensions/dev/experimental.html
-    "fileBrowserHandler", // http://goo.gl/GqbrP
-    "geolocation", // http://dev.w3.org/geo/api/spec-source.html
-    "history", // http://code.google.com/chrome/extensions/history.html
-    "idle", // http://code.google.com/chrome/extensions/idle.html
-    "management", // http://code.google.com/chrome/extensions/management.html
-    "notifications", // code.google.com/chrome/extensions/notifications.html
-    "tabs", // http://code.google.com/chrome/extensions/tabs.html +windows.html
-    "tts", // http://code.google.com/chrome/extensions/tts.html
-    "ttsEngine", // http://code.google.com/chrome/extensions/ttsEngine.html
-    "unlimitedStorage"
-  ],
-  */
+  "homepage_url": "http://google.com",
+  
 
 
 
@@ -119,6 +57,76 @@ Use browser actions to put icons in the main Google Chrome toolbar, to the right
 
 
 //////////////////NEED ONE OF THESE 
+
+
+
+
+
+
+
+
+// https://developer.chrome.com/extensions/event_pages
+
+/* A common need for apps and extensions is to have a single long-running script to manage some task or state. Event pages to the rescue. Event pages are loaded only when they are needed. When the event page is not actively doing something, it is unloaded, freeing memory and other system resources. */
+
+/*
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+*/
+
+// https://developer.chrome.com/extensions/content_scripts
+
+/* Content scripts are JavaScript files that run in the context of web pages.
+By using the standard Document Object Model (DOM), they can read details of the
+web pages the browser visits, or make changes to them. */
+
+/*
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "css": ["mystyles.css"],
+      "js": ["jquery.js", "myscript.js"]
+    }
+  ],
+*/
+
+
+
+
+
+  //============================================================================
+  // PERMISSIONS - FIX/PRUNE THESE
+  //============================================================================
+
+  // http://code.google.com/chrome/extensions/manifest.html#permissions
+
+  /*
+  "permissions": [
+    "http://*.google.com/", // Refer to http://goo.gl/CPeqK http://goo.gl/U3Vev
+    "bookmarks", // http://code.google.com/chrome/extensions/bookmarks.html
+    "chrome://favicon/",
+    "clipboardRead", // document.execCommand('paste').
+    "clipboardWrite", // document.execCommand('copy' OR 'cut')
+    "contextMenus", //http:///code.google.com/chrome/extensions/contextMenus.html
+    "cookies", // http://code.google.com/chrome/extensions/cookies.html
+    // "experimental", // http://code.google.com/chrome/extensions/dev/experimental.html
+    "fileBrowserHandler", // http://goo.gl/GqbrP
+    "geolocation", // http://dev.w3.org/geo/api/spec-source.html
+    "history", // http://code.google.com/chrome/extensions/history.html
+    "idle", // http://code.google.com/chrome/extensions/idle.html
+    "management", // http://code.google.com/chrome/extensions/management.html
+    "notifications", // code.google.com/chrome/extensions/notifications.html
+    "tabs", // http://code.google.com/chrome/extensions/tabs.html +windows.html
+    "tts", // http://code.google.com/chrome/extensions/tts.html
+    "ttsEngine", // http://code.google.com/chrome/extensions/ttsEngine.html
+    "unlimitedStorage"
+  ],
+  */
+
+
+
 
 
 
