@@ -1,6 +1,7 @@
 /* https://developer.chrome.com/extensions/i18n */
 /* Use the chrome.i18n infrastructure to implement internationalization across your whole app or extension. */
 
+
 {
   "l10nTabName": {
     "message":"Localization"
