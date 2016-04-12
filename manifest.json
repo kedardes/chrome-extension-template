@@ -1,7 +1,7 @@
-{
+{  
   // REQUIRED
   "name": "Chrome Extension Name",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "manifest_version": 2,
 
   // RECOMMENDED
@@ -113,5 +113,7 @@
     "chrome_style": true      //recommended
   },
   */
+
+  //Add in the basic functionality like a popup and a page css styling thing
 
 }
